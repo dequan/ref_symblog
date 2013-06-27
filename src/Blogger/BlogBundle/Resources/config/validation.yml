@@ -1,0 +1,11 @@
+Blogger\BlogBundle\Entity\Enquiry:
+    properties:
+        name:
+            - NotBlank: ~
+        email:
+            - Email: { groups: [registration] }
+        subject:
+            - NotBlank: ~
+            - Length: { max: 50, groups: [registration] }
+        body:
+            - Length: { min: 50, groups: [registration] }
